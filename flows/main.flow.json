@@ -1,0 +1,136 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name==='flight'",
+          "conditionType": "raw",
+          "node": "node-1"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-2"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "545c188578",
+      "name": "node-2",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-3O_H4G"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f036b82cd5",
+      "name": "node-1",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-3"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"fromCity\",\"value\":\"{{event.nlu.slots.fromCity.value}}\"}",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"toCity\",\"value\":\"{{event.nlu.slots.toCity.value}}\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "9a6ec2083f",
+      "name": "node-3",
+      "next": [
+        {
+          "condition": "temp.fromCity",
+          "conditionType": "raw",
+          "node": "node-5"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-4"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "965216c520",
+      "name": "node-4",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-5"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-nt_zz3"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"fromCity\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "576a360cfe",
+      "name": "node-5",
+      "next": [
+        {
+          "condition": "temp.toCity",
+          "conditionType": "raw",
+          "node": "node-91a7"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "node-6"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e5ae938826",
+      "name": "node-6",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-91a7"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-gdmkEL"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"toCity\",\"value\":\"{{event.payload.text}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "ad3fefc94f",
+      "name": "node-91a7",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-soriJ-"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

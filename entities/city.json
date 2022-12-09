@@ -1,0 +1,10 @@
+{
+  "id": "city",
+  "name": "city",
+  "type": "list",
+  "occurrences": [],
+  "sensitive": false,
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": ""
+}

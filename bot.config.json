@@ -1,0 +1,55 @@
+{
+  "locked": false,
+  "details": {
+    "website": "",
+    "phoneNumber": "",
+    "emailAddress": "",
+    "termsConditions": "",
+    "privacyPolicy": "",
+    "avatarUrl": "",
+    "coverPictureUrl": ""
+  },
+  "skillChoice": {
+    "matchNLU": true,
+    "matchNumbers": true
+  },
+  "skillSendEmail": {
+    "transportConnectionString": "<<change me>>"
+  },
+  "$schema": "../../bot.config.schema.json",
+  "description": "Booking Flights ",
+  "active": true,
+  "name": "FlightReservationBot",
+  "author": "Botpress, Inc.",
+  "license": "AGPL-3.0",
+  "imports": {
+    "modules": [],
+    "incomingMiddleware": [],
+    "outgoingMiddleware": []
+  },
+  "dialog": {
+    "timeoutInterval": "5m"
+  },
+  "logs": {
+    "expiration": "1 week"
+  },
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "id": "small-talk",
+  "messaging": {
+    "clientId": "a455b731-299a-4787-80fd-891454dac6a7",
+    "clientToken": "3ea42f03-2a2f-4601-90d9-caa865dec0b3.aNQJukoCmvkF7gCrtWY1/LqCVKNW+/E0cso27ZHjOyt8sbsYHNELC/EZb7RTA9QlSYTW50m72DxJJAIvXGZTpKym",
+    "channels": {},
+    "webhookToken": "dGwOPyHoOwbzpIIBFAyVOJR/NvTrfb4vY+MiLGYxzHvaKLBoRwidLX4NYr65zUU12twa6fcZrM3g/ILfME1cr1pD"
+  },
+  "cloud": {
+    "botId": "f87c4f4b-8d72-4e1d-bc1e-3d9d793835f1",
+    "workspaceId": "7481bdf4-b814-49ff-a7d5-a4a32ae7c3e3"
+  },
+  "nluModels": {
+    "en": "b732c199c35a0624.b2eeb23efb448373.4528.en"
+  },
+  "showBotInfoPage": false
+}

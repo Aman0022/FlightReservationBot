@@ -1,0 +1,31 @@
+{
+  "name": "flight",
+  "utterances": {
+    "en": [
+      "I want to book a flight",
+      "I want to book a flight from [Delhi](fromCity) to [Lucknow](toCity)",
+      "I want to fly from [Lucknow](fromCity)"
+    ]
+  },
+  "slots": [
+    {
+      "id": "-5CH24tXts2ZoJxAlI3s0",
+      "name": "fromCity",
+      "entities": [
+        "city"
+      ],
+      "color": 1
+    },
+    {
+      "id": "ai2NxNdlV1_KGxUEalnSW",
+      "name": "toCity",
+      "entities": [
+        "city"
+      ],
+      "color": 2
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}
